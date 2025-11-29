@@ -1,5 +1,6 @@
 # What Is a Network? – TryHackMe Notes
 
+
 This is my first room from the “Network Fundamentals” module. I kept my notes simple so I can come back to them quickly.
 
 ---
@@ -31,3 +32,20 @@ All of this becomes important later in detection and investigation.
 ---
 
 Very basic room, but it sets the foundation for everything that comes next.
+ 
+  _Completed: Nov 28, 2025_
+
+---
+
+# Intro to LAN – TryHackMe Notes
+
+
+## What I Learned
+- How devices communicate inside a local network
+- Role of switches and broadcast domains
+- MAC addressing basics
+- Difference between unicast, broadcast, and multicast
+- How local network traffic flows
+    
+_Completed: Nov 29, 2025_
+
