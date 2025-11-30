@@ -5,21 +5,21 @@ This is my first room from the “Network Fundamentals” module. I kept my note
 
 
 
-## What I Learned
+### What I Learned
 - A network is basically a way for devices to talk to each other.
 - Devices can share information, resources, or services through connections.
 - Networks can be small (home network) or huge (the internet).
 - Every device needs an identifier (an IP address) to communicate.
 
 
-## Key Points (In My Own Words)
+### Key Points (In My Own Words)
 - The internet is just a giant network of many smaller networks.
 - Networks help computers share files, send messages, and access websites.
 - Without networks, security monitoring wouldn’t exist — no logs, no traffic, nothing to analyze.
 
 
 
-## Why This Matters for SOC Work
+### Why This Matters for SOC Work
 Understanding what a network actually is makes it easier to understand:
 - how attackers move from one device to another  
 - why logs are generated  
@@ -52,7 +52,7 @@ Very basic room, but it sets the foundation for everything that comes next.
 # Intro to LAN – TryHackMe Notes
 
 
-## What I Learned
+### What I Learned
 - How devices communicate inside a local network
 - Role of switches and broadcast domains
 - MAC addressing basics
@@ -76,7 +76,7 @@ I just finished the OSI Model room on TryHackMe, and these are basically the not
 
 
 
-## What I Understand So Far
+### What I Understand So Far
 
 - The OSI Model is basically a **7-step explanation** of how data moves from one device to another. I never really thought about how much happens behind the scenes until now.
 - The lower layers (1–4) seem to deal more with “how stuff actually travels,” while the upper ones (5–7) feel more like “how apps and humans interact.” Not sure if that’s a perfect way to say it, but it helps me remember.
@@ -84,7 +84,7 @@ I just finished the OSI Model room on TryHackMe, and these are basically the not
 
 
 
-## Layer Thoughts (My Own Words)
+### Layer Thoughts (My Own Words)
 
 - **Physical Layer:** literally the wires and signals. Easy enough.
 - **Data Link:** MAC addresses, frames… still need to get more comfortable with this, but I get the basic idea.
@@ -94,7 +94,7 @@ I just finished the OSI Model room on TryHackMe, and these are basically the not
 
 
 
-## My Real Takeaways
+### My Real Takeaways
 
 - Thinking of it as a “ladder” really helped.
 - When I see logs in the future (like in a SIEM), I’ll probably be able to recognize which layer the problem is happening in.
@@ -103,10 +103,51 @@ I just finished the OSI Model room on TryHackMe, and these are basically the not
 
 
 
-## What I Still Need to Review
+### What I Still Need to Review
 
 - Difference between frames vs packets vs segments
 - The three upper layers (5, 6, 7) — I understand them, but not confidently
 - How the OSI layers map to real protocols (e.g., where HTTPS sits, where ARP sits, etc.)
 
 _**Completed:** Nov 29, 2025_
+
+
+
+
+---
+
+
+
+
+
+
+# Packets & Frames – TryHackMe Notes
+
+**Completed:** Nov 30, 2025
+
+These are my personal notes from finishing the Packets & Frames room on TryHackMe. I wrote them mainly to remind myself how data actually moves across a network.
+
+---
+
+### What I Learned
+
+- Data doesn't just “travel”; it’s broken into **frames** (Layer 2) and **packets** (Layer 3).
+- A **frame** uses MAC addresses and is used inside the local network.
+- A **packet** uses IP addresses and can travel across networks.
+- Frames stay within a LAN, but packets can move between networks, through routers.
+- The headers contain all the important details like source/destination MAC, IP, protocol, etc.
+- Encapsulation basically wraps data in different layers depending on where it’s going.
+- Understanding packets and frames helps a lot when reading logs or looking at alerts.
+
+---
+
+### Takeaways
+
+- Frames = local network communication  
+- Packets = bigger network communication  
+- Seeing the difference helps me understand why certain attacks or alerts show up the way they do.
+- This also helps prepare for deeper packet analysis in the future.
+
+
+
+
