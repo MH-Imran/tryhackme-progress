@@ -123,11 +123,10 @@ _**Completed:** Nov 29, 2025_
 
 # Packets & Frames – TryHackMe Notes
 
-**Completed:** Nov 30, 2025
 
 These are my personal notes from finishing the Packets & Frames room on TryHackMe. I wrote them mainly to remind myself how data actually moves across a network.
 
----
+
 
 ### What I Learned
 
@@ -139,7 +138,7 @@ These are my personal notes from finishing the Packets & Frames room on TryHackM
 - Encapsulation basically wraps data in different layers depending on where it’s going.
 - Understanding packets and frames helps a lot when reading logs or looking at alerts.
 
----
+
 
 ### Takeaways
 
@@ -149,5 +148,6 @@ These are my personal notes from finishing the Packets & Frames room on TryHackM
 - This also helps prepare for deeper packet analysis in the future.
 
 
+_**Completed:** Nov 30, 2025_
 
 
