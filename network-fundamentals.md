@@ -151,3 +151,57 @@ These are my personal notes from finishing the Packets & Frames room on TryHackM
 _**Completed:** Nov 30, 2025_
 
 
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+# Extending Your Network – TryHackMe Notes
+
+
+These are my own notes from the “Extending Your Network” room in the Network Fundamentals module. I kept them simple because I'm trying to understand how networks scale in real life.
+
+
+
+### What I Learned
+- As networks grow, you can’t keep everything inside one big LAN. It becomes messy and noisy, so you start splitting things into smaller parts.
+- Switches help expand the network but still keep everything inside the same broadcast domain.
+- Routers connect different networks and make decisions using IP addresses.  
+- VLANs were confusing before, but now they make sense: they’re basically “virtual sections” of the same physical switch.
+- Collision domains vs broadcast domains finally clicked for me.
+
+
+### Firewall 
+- Firewalls sit between networks to block or allow traffic.  
+- It’s basically a security checkpoint between segments or between the internal network and the internet.
+- They work mostly at **Layer 3 and Layer 4** (IP + ports), which connects perfectly with what I learned about routers and segmentation.
+- Without firewalls, “extending the network” would also mean “extending attack surface,” so segmentation alone isn’t enough.
+- Routers decide *where* traffic goes; firewalls decide *whether it should go* at all.
+
+
+### Takeaways
+- Big networks need structure, not just more cables.
+- Routers = layer 3 decisions (IP-based).  
+- Switches = layer 2 organization (MAC-based).  
+- VLANs = keep networks tidy without extra hardware.  
+- Firewalls = control and protect the traffic between those segments.
+
+This room helped me understand how networks grow without turning into complete chaos — and why security has to grow with it.
+
+
+_**Completed:** Dec 01, 2025_
+
+
+
+
