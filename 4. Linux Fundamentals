@@ -1,0 +1,35 @@
+# Linux Fundamentals – Part 1 - TryHackMe Notes
+
+**Module:** Pre-Security → Linux Fundamentals
+
+These are my personal notes from “Linux Fundamentals Part 1.”  
+Even though I have been using Kali for a long time and this room helped me organize the basics in my head and understand how Linux is structured underneath.
+
+---
+
+## What I Learned (in my own words)
+
+### Linux is built differently from Windows
+One thing that clicked for me is how Linux treats *everything as a file* — from text documents to devices.  
+It feels strange at first, but once you understand it, Linux becomes way more predictable.
+
+### The filesystem has a clean, logical layout
+This room made me look again at the Linux directory structure:
+
+- **/home** → where users store their stuff  
+- **/etc** → configuration files  
+- **/bin** & **/sbin** → essential system commands  
+- **/var** → logs and data that constantly change  
+- **/root** → home folder for the root user  
+
+I already knew most of this from using Kali, but this time it made more sense *why* things are organized this way.
+
+### Commands feel more meaningful when you know where you are
+Working with:
+
+```bash
+ls
+cd
+pwd
+
+_**Completed:** 06 Dec 2025**_
