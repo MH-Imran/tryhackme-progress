@@ -1,3 +1,5 @@
+![logo](https://github.com/MH-Imran/tryhackme-progress/blob/main/Pre-Security/Pre-Security%20Cert.png)
+
 # Pre-Security (THM)
 
 I created this folder to keep my **TryHackMe Pre-Security** notes in one place. I finished the Pre-Security path, and I also want a clean structure so I can continue adding my **SOC Level 1** progress without mixing everything together.
