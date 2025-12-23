@@ -1,4 +1,4 @@
-# Junior Security Analyst Intro — (TryHackMe)
+# Junior Security Analyst Intro 
 
 ## Why I did this room
 I’m working toward a SOC Analyst (Tier 1) role, so I wanted a clear picture of what a junior analyst actually does day-to-day. This room felt like a good “reality check” before going deeper into tools and labs.
@@ -63,7 +63,7 @@ This room made SOC work feel more realistic for me. It’s not about being perfe
 
 
 
-# SOC Role in Blue Team — (TryHackMe)
+# SOC Role in Blue Team
 
 ## Why I did this room
 I wanted to understand the SOC role from the blue team side — not just tools, but responsibilities. I’m trying to build the habit of thinking like a defender: detect, verify, respond, and communicate.
@@ -117,5 +117,93 @@ SOC work is not about knowing everything — it’s about following a process, s
 
 
 
+---
+
+
+
+
+
+# Human as Attack Vectors 
+
+## What I understood after this room
+This room made one thing very clear: attackers don’t always “hack systems” first — they often **hack people** first. If they can influence a decision (click, trust, share, approve), they can bypass a lot of security controls.
+
+## Common human-based attack methods
+- **Phishing**: fake messages that push you to click, open, or login
+- **Spear phishing**: phishing that’s personalized (more convincing)
+- **Vishing / Smishing**: phone calls / SMS used to steal info or push actions
+- **Pretexting**: pretending to be IT/HR/bank/vendor to create urgency
+- **Baiting**: “free” files, cracked software, USB drops, giveaways
+- **Tailgating**: physical access by following someone into a restricted area
+
+## What attackers usually want
+- Credentials (passwords, MFA codes, session tokens)
+- Money transfers / invoice changes (BEC)
+- Access to internal tools (VPN, email, helpdesk, Slack/Teams)
+- A foothold to move deeper (lateral movement)
+
+## SOC signals I’d watch for
+- Login success after unusual failures (4625 → 4624 patterns)
+- New sign-ins from unusual IPs/devices/locations
+- New mailbox rules/forwarding, suspicious OAuth consent
+- Unusual password reset activity or MFA prompt fatigue reports
+- User reports like “I clicked a link” or “someone called from IT” (treat as high-signal)
+
+## Defenses that actually help
+- Security awareness that teaches real examples (not just theory)
+- Strong MFA (prefer phishing-resistant options when possible)
+- Email protections (SPF/DKIM/DMARC, safe links, attachment scanning)
+- Clear verification rules for sensitive requests (finance, IT, HR)
+- Easy reporting path for suspicious messages (button + fast response)
+
+## My takeaway
+People make mistakes — that’s normal. SOC work is about reducing damage when it happens, spotting the early signals, and helping the organization learn without blaming the victim.
+
+
+
 
 ---
+
+
+
+
+
+# System as Attack Vectors
+
+## What I understood after this room
+This room reminded me that systems don’t need “zero-days” to get breached. A lot of compromises happen because of **misconfigurations, weak controls, and unpatched software**. Attackers love predictable weaknesses.
+
+## System-side attack vectors (high level)
+- **Unpatched vulnerabilities** in OS/apps/services
+- **Weak authentication** (weak passwords, exposed RDP/SSH, no MFA)
+- **Misconfigurations** (open ports, default credentials, unsafe permissions)
+- **Exposed services** (databases, admin panels, remote management)
+- **Poor access control** (users with too much privilege)
+- **Insecure software / scripts** running in the environment
+- **Lack of visibility** (no logging, no alerts, no endpoint monitoring)
+
+## What a SOC analyst should look for
+- Suspicious external connections to critical ports (RDP/SMB/SSH)
+- Repeated auth failures followed by success (spray/brute force behavior)
+- New admin users or privilege changes (4720/4732/4672 indicators)
+- New scheduled tasks/services or persistence artifacts
+- Strange parent/child process chains (PowerShell → cmd → downloads/execution)
+- Lateral movement signals (new logons to multiple hosts, new remote sessions)
+
+## Why “privilege” matters
+If an attacker gets a normal user, they often try to upgrade to admin:
+- Find stored credentials
+- Abuse misconfigurations
+- Exploit local vulnerabilities
+- Move laterally to higher-value machines
+
+## Defensive habits that reduce real risk
+- Patch management (prioritize internet-facing + high severity)
+- Reduce attack surface (close ports, disable unused services)
+- Least privilege (users don’t need admin rights by default)
+- Strong logging (Windows Security logs, Sysmon, SIEM forwarding)
+- Baselines (know what “normal” processes and connections look like)
+- Hardening + monitoring for persistence points (tasks, services, run keys)
+
+## My takeaway
+“System as attack vector” is basically: if we leave doors open, someone will try them. The SOC job is to notice the patterns early, validate what’s real, and help close the gaps before they become incidents.
