@@ -371,4 +371,158 @@ This room helped me understand how SOC work is evaluated, not just how it’s do
 Learning detection is important.
 Learning how detection is measured is what makes a professional SOC analyst.
 
+
+
+
+
+
+---
+
+
+
+
+
+
+
+# Introduction to Phishing (Room Notes)
+
+## Why I did this room
+
+Phishing is one of those threats that looks “simple” on the surface, but it’s still one of the most successful attack methods today. This room helped me see phishing the way a SOC analyst should: not just as “a fake email,” but as a full attack chain that can lead to credential theft, malware delivery, or even ransomware.
+
+My goal was to understand:
+- how phishing actually works in real environments
+- what clues matter during triage
+- what evidence I should look for beyond the email itself
+
+
+
+## What phishing really is (in my own words)
+
+Phishing is a social engineering attack where an attacker tries to trick a person into doing something risky, usually:
+- clicking a malicious link
+- opening a weaponized attachment
+- entering credentials on a fake login page
+- approving an MFA prompt
+- sending sensitive data
+
+The attacker doesn’t need to “hack” a firewall first — they try to hack the human.
+
+
+
+## Common phishing goals I learned
+
+### 1) Credential theft
+The most common objective: steal passwords (and sometimes MFA tokens).  
+This usually leads to:
+- account takeover
+- email compromise (BEC)
+- internal access and lateral movement
+
+### 2) Malware delivery
+Sometimes the email is just the delivery vehicle:
+- malicious Office documents
+- PDFs with embedded links
+- executable payloads (rare, but still happens)
+- download links to trojans/loaders
+
+### 3) Business Email Compromise (BEC)
+Not always malware. Sometimes it’s pure fraud:
+- fake invoice requests
+- wire transfer scams
+- “CEO” urgency messages
+
+
+
+## Types of phishing (how I now categorize it)
+
+### Generic phishing (spray and pray)
+Mass emails sent to many people, hoping someone clicks.
+
+### Spear phishing
+Targeted messages built specifically for a person/team.
+
+### Whaling
+Phishing aimed at executives or high-privilege users.
+
+### Smishing / Vishing
+- Smishing: SMS phishing
+- Vishing: voice phishing (calls)
+
+
+
+## What a SOC analyst should check during triage
+
+This part was the biggest learning for me: the email is only the start. A good SOC triage asks:
+
+### 1) Who sent it?
+- Is the sender domain real or a look-alike?
+  Example: `m1crosoftsupport.co` vs `microsoft.com`
+- Does the display name try to fake legitimacy?
+- Is SPF/DKIM/DMARC failing? (if available)
+
+### 2) What is the lure?
+- urgency (“unusual sign-in attempt”, “verify now”)
+- fear (“account will be locked”)
+- reward (“you won a prize”)
+- authority (“HR”, “IT Support”, “CEO”)
+
+### 3) Where does the link go?
+- Does the visible text match the actual URL?
+- Is the domain brand-new, weird, or misspelled?
+- Is the link shortened (bit.ly, tinyurl)?
+- Does it redirect multiple times?
+
+### 4) Is there an attachment?
+If yes, treat it as high risk:
+- macro documents
+- ISO/ZIP containers
+- PDFs with embedded scripts/links
+
+### 5) Did anyone click it?
+This is the key question for escalation.
+Even a “confirmed malicious” email becomes more urgent if:
+- a user clicked
+- credentials were entered
+- the endpoint made outbound connections
+
+
+
+## Evidence beyond the email (what I should look for)
+
+If this happened in a real SOC, I’d correlate:
+- proxy logs (was the URL accessed?)
+- DNS logs (did the machine resolve the domain?)
+- firewall logs (outbound connections allowed/blocked?)
+- EDR telemetry (new processes, downloads, script execution)
+- authentication logs (new sign-ins, impossible travel, MFA fatigue attempts)
+
+This room helped me understand that phishing investigation is really:
+**email + endpoint + network + identity logs**.
+
+
+
+## Quick red flags checklist (what I’ll remember)
+
+- look-alike domain spelling
+- urgent “act now” language
+- mismatched link text vs URL
+- attachments with pressure to open
+- strange sender address for an official brand
+- odd locations / unexpected login alerts
+- requests for credentials, money, or MFA approval
+
+
+
+## My personal takeaway
+
+Phishing isn’t just an email problem. It’s often the first step into a bigger compromise.
+
+If I can triage phishing correctly, I can:
+- prevent credential theft early
+- stop malware execution before it spreads
+- reduce SOC workload by filtering noise intelligently
+
+This room made phishing feel less like “random scam emails” and more like a real incident type with a predictable investigation flow.
+
 ---
