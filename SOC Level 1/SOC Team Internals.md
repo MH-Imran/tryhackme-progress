@@ -144,3 +144,231 @@ Even for beginners, this matters because it prevents the “I forgot everything�
 My biggest takeaway from this room:
 **SOC work becomes easier when you build a routine — not when you try to memorize everything.**
 
+
+
+
+
+
+---
+
+
+
+
+
+
+# SOC Metrics & Objectives (Room Notes)
+
+## Why this room mattered to me
+
+Before this room, I thought SOC work was mostly about **finding alerts and reacting fast**.  
+This lab helped me realize something important:  
+a SOC is also measured, evaluated, and improved using **metrics** — not guesses.
+
+If you can’t measure how your SOC performs, you can’t prove value or improve response.
+
+
+
+## What are SOC Metrics (in simple words)
+
+SOC metrics are **numbers that explain how well a SOC is doing**.
+
+They help answer questions like:
+- Are we detecting attacks fast enough?
+- Are analysts overwhelmed with false alerts?
+- Are incidents being resolved properly?
+- Is security actually improving over time?
+
+Metrics turn SOC work into **data-driven decisions** instead of opinions.
+
+
+
+## Key SOC Metrics I Learned
+
+### 1. Mean Time To Detect (MTTD)
+- How long it takes to **notice** an incident after it starts
+- Lower MTTD = better detection
+
+Example:
+If an attack starts at 10:00 and SOC notices at 10:15 → MTTD = 15 minutes
+
+
+
+### 2. Mean Time To Respond (MTTR)
+- How long it takes to **contain or remediate** an incident
+- Measures response efficiency
+
+Example:
+Alert detected at 10:15, resolved at 10:45 → MTTR = 30 minutes
+
+
+
+### 3. Alert Volume
+- Total number of alerts generated
+- High volume ≠ good security
+
+Too many alerts usually mean:
+- Poor tuning
+- Analyst fatigue
+- Missed real threats
+
+
+
+### 4. False Positive Rate
+- Alerts that look malicious but are actually benign
+- A high false positive rate wastes analyst time
+
+Goal:
+Reduce noise so analysts focus on **real threats**
+
+---
+
+### 5. Incident Closure Rate
+- How many incidents are fully investigated and closed
+- Shows analyst productivity and process maturity
+
+
+
+## SOC Objectives (What a SOC is actually trying to achieve)
+
+This room made it clear that SOC goals are **not just technical**.
+
+### Core SOC Objectives
+
+- Detect threats early
+- Respond quickly and correctly
+- Reduce attacker dwell time
+- Protect business operations
+- Improve security posture over time
+
+A SOC that only “alerts” but doesn’t improve is failing its mission.
+
+
+
+## Metrics vs Objectives (Important difference)
+
+- **Objectives** = what the SOC wants to achieve  
+- **Metrics** = how we prove we’re achieving it
+
+Example:
+Objective: Faster incident response  
+Metric: Reduced MTTR month over month
+
+
+
+## Why this matters for a SOC Analyst
+
+As a junior SOC analyst, I learned that:
+- My investigations affect SOC metrics
+- Poor triage increases MTTR
+- Mislabeling alerts increases false positives
+- Clean investigations help SOC maturity
+
+SOC work isn’t invisible — it’s measured.
+
+
+
+## Real-world SOC takeaway
+
+Good SOCs don’t just fight fires.
+They:
+- Track performance
+- Tune detections
+- Reduce noise
+- Improve response over time
+
+Metrics are how SOC teams justify budgets, tools, and headcount.
+
+
+## Final reflection
+
+This room helped me understand **how SOC work is evaluated**, not just how it’s done.
+
+Learning detection is important.  
+Learning **how detection is measured** is what makes a professional SOC analyst.SOC Metrics & Objectives — TryHackMe (Blue Team Fundamentals)
+Why this room mattered to me
+Before this room, I thought SOC work was mostly about finding alerts and reacting fast.
+This lab helped me realize something important:
+a SOC is also measured, evaluated, and improved using metrics — not guesses.
+
+If you can not measure how your SOC performs then you can’t prove value or improve response.
+
+What are SOC Metrics (in simple words)
+SOC metrics are numbers that explain how well a SOC is doing.
+
+They help answer questions like:
+
+Are we detecting attacks fast enough?
+Are analysts overwhelmed with false alerts?
+Are incidents being resolved properly?
+Is security really actually improving over time?
+Metrics turn SOC work into data-driven decisions instead of opinions.
+
+Key SOC Metrics I Learned
+1. Mean Time To Detect (MTTD)
+How long it takes to notice an incident after it starts
+Lower MTTD = better detection
+Example: If an attack starts at 10:00 and SOC notices at 10:15 → MTTD = 15 minutes
+
+2. Mean Time To Respond (MTTR)
+How long it takes to contain or remediate an incident
+Measures response efficiency
+Example: Alert detected at 10:15, resolved at 10:45 → MTTR = 30 minutes
+
+3. Alert Volume
+Total number of alerts generated
+High volume ≠ good security
+Too many alerts usually mean:
+
+Poor tuning
+Analyst fatigue
+Missed real threats
+4. False Positive Rate
+Alerts that look malicious but are actually benign
+A high false positive rate wastes analyst time
+Goal: Reduce noise so analysts focus on real threats
+
+5. Incident Closure Rate
+How many incidents are fully investigated and closed
+Shows analyst productivity and process maturity
+SOC Objectives (What a SOC is actually trying to achieve)
+This room made it clear that SOC goals are not just technical.
+
+Core SOC Objectives
+Detect threats early
+Respond quickly and correctly
+Reduce attacker dwell time
+Protect business operations
+Improve security posture over time
+A SOC that only “alerts” but doesn’t improve is failing its mission.
+
+Metrics vs Objectives (Important difference)
+Objectives = what the SOC wants to achieve
+Metrics = how we prove we’re achieving it
+Example: Objective: Faster incident response
+Metric: Reduced MTTR month over month
+
+Why this matters for a SOC Analyst
+As a junior SOC analyst, I learned that:
+
+My investigations affect SOC metrics
+Poor triage increases MTTR
+Mislabeling alerts increases false positives
+Clean investigations help SOC maturity
+SOC work isn’t invisible — it’s measured.
+
+Real-world SOC takeaway
+Good SOCs don’t just fight fires. They:
+
+Track performance
+Tune detections
+Reduce noise
+Improve response over time
+Metrics are how SOC teams justify budgets, tools, and headcount.
+
+Final reflection
+This room helped me understand how SOC work is evaluated, not just how it’s done.
+
+Learning detection is important.
+Learning how detection is measured is what makes a professional SOC analyst.
+
+---
