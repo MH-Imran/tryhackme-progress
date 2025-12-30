@@ -1,4 +1,4 @@
-# Junior Security Analyst Intro 
+# Junior Security Analyst Intro (Room Notes)
 
 ## Why I did this room
 I’m working toward a SOC Analyst (Tier 1) role, so I wanted a clear picture of what a junior analyst actually does day-to-day. This room felt like a good “reality check” before going deeper into tools and labs.
@@ -63,7 +63,7 @@ This room made SOC work feel more realistic for me. It’s not about being perfe
 
 
 
-# SOC Role in Blue Team
+# SOC Role in Blue Team (Room Notes)
 
 ## Why I did this room
 I wanted to understand the SOC role from the blue team side — not just tools, but responsibilities. I’m trying to build the habit of thinking like a defender: detect, verify, respond, and communicate.
@@ -123,7 +123,7 @@ SOC work is not about knowing everything — it’s about following a process, s
 
 
 
-# Human as Attack Vectors 
+# Human as Attack Vectors (Room Notes)
 
 ## What I understood after this room
 This room made one thing very clear: attackers don’t always “hack systems” first — they often **hack people** first. If they can influence a decision (click, trust, share, approve), they can bypass a lot of security controls.
@@ -168,7 +168,7 @@ People make mistakes — that’s normal. SOC work is about reducing damage when
 
 
 
-# System as Attack Vectors
+# System as Attack Vectors (Room Notes)
 
 ## What I understood after this room
 This room reminded me that systems don’t need “zero-days” to get breached. A lot of compromises happen because of **misconfigurations, weak controls, and unpatched software**. Attackers love predictable weaknesses.
